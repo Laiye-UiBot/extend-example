@@ -8,6 +8,11 @@ public class JavaPlugin
 		System.out.println("Cannot use this function");
 	}
 	
+	public int Add(int number1, int number2)
+	{
+		return number1 + number2;
+	}
+	
 	public String GetString()
 	{	//可以直接调用UiBot.API.GetString，这是UiBot提供的插件API
 		return UiBot.API.GetString("Excel/SaveBook");
