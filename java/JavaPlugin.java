@@ -1,4 +1,4 @@
-﻿// UiBot内置了org.json.*，可以直接导入
+// UiBot内置了org.json.*，可以直接导入
 import org.json.*;
 
 public class JavaPlugin
