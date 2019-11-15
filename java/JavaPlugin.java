@@ -1,20 +1,20 @@
-// UiBotÄÚÖÃÁËorg.json.*£¬¿ÉÒÔÖ±½Óµ¼Èë
+ï»¿// UiBotå†…ç½®äº†org.json.*ï¼Œå¯ä»¥ç›´æ¥å¯¼å…¥
 import org.json.*;
 
 public class JavaPlugin
 {
 	protected void CanNotUse()
-	{	//protected»òprivateÊôĞÔµÄº¯Êı£¬²»ÄÜ±»UiBotµ÷ÓÃ£¬µ«¿ÉÒÔÔÚÆäËûº¯ÊıÖĞµ÷ÓÃ
+	{	//protectedæˆ–privateå±æ€§çš„å‡½æ•°ï¼Œä¸èƒ½è¢«UiBotè°ƒç”¨ï¼Œä½†å¯ä»¥åœ¨å…¶ä»–å‡½æ•°ä¸­è°ƒç”¨
 		System.out.println("Cannot use this function");
 	}
 	
 	public String GetString()
-	{	//¿ÉÒÔÖ±½Óµ÷ÓÃUiBot.API.GetString£¬ÕâÊÇUiBotÌá¹©µÄ²å¼şAPI
+	{	//å¯ä»¥ç›´æ¥è°ƒç”¨UiBot.API.GetStringï¼Œè¿™æ˜¯UiBotæä¾›çš„æ’ä»¶API
 		return UiBot.API.GetString("Excel/SaveBook");
 	}
 	
 	public JSONArray Concat(JSONArray array1, JSONArray array2)
-	{	//Èç¹ûÒª´«Èë»ò·µ»ØÊı×é£¬ÇëÓÃorg.json.JSONArrayÀàĞÍ
+	{	//å¦‚æœè¦ä¼ å…¥æˆ–è¿”å›æ•°ç»„ï¼Œè¯·ç”¨org.json.JSONArrayç±»å‹
 		JSONArray result = new JSONArray();
 		for (int i = 0; i < array1.length(); i++) 
 		{
