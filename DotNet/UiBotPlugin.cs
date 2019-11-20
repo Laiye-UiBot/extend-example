@@ -1,17 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using Newtonsoft.Json.Linq;
+
+//建议把下面的namespace名字改为您的插件名字
 namespace UiBotPlugin
 {
     public interface Plugin_Interface
-    {
+    {   //定义一个插件函数时，必须先在这个interface里面声明
         int Add(int number1, int number2);
         string GetString();
-        void Print();
+        JArray Concat(JArray array1, JArray array2);
     }
 
     public class Plugin_Implement : Plugin_Interface
-    {
+    {   //在这里实现插件函数
         public int Add(int number1, int number2)
         {
             return number1 + number2;
@@ -22,14 +22,18 @@ namespace UiBotPlugin
             return UiBot.API.GetString("Excel/SaveBook");
         }
 
-        public void Print()
-        {
-            for(int i = 0; i < 10; i++)
+        public JArray Concat(JArray array1, JArray array2)
+        {   //如果要传入或返回数组，请用Newtonsoft.Json.Linq.JArray类型
+            JArray result = new JArray();
+            for (int i = 0; i < array1.Count; i++)
             {
-                System.Console.WriteLine(UiBot.API.GetCommanderInfo());
-                
-                System.Threading.Thread.Sleep(1000);
+                result.Add(array1[i]);
             }
+            for (int i = 0; i < array2.Count; i++)
+            {
+                result.Add(array2[i]);
+            }
+            return result;
         }
     }
 }

@@ -1,3 +1,5 @@
+//这个文件一般不需要您修改，请保持以下内容不变
+
 using System;
 using System.Runtime.InteropServices;
 using System.Text;
