@@ -13,6 +13,9 @@ namespace UiBot
 
         [DllImport("LuaApi.dll", CallingConvention = CallingConvention.Cdecl)]
         internal static extern IntPtr GetCommanderInfo();
+
+        [DllImport("LuaApi.dll", CallingConvention = CallingConvention.Cdecl)]
+        internal static extern int ExecuteStatement(byte[] lpStatement);
     }
 
     public class API
@@ -38,12 +41,17 @@ namespace UiBot
 
         public static string GetString(string strPath)
         {
-            return PtrToString(RawPtr.GetString(Encoding.ASCII.GetBytes(strPath)));
+            return PtrToString(RawPtr.GetString(Encoding.UTF8.GetBytes(strPath)));
         }
 
         public static string GetCommanderInfo()
         {
             return PtrToString(RawPtr.GetCommanderInfo());
+        }
+        
+        public static int ExecuteStatement(string strStatement)
+        {
+            return RawPtr.ExecuteStatement(Encoding.UTF8.GetBytes(strStatement));
         }
     }
 }
