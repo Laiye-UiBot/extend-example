@@ -35,6 +35,9 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DotNetAdapter">
+      <HintPath>DotNetAdapter.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -48,10 +51,9 @@
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Newtonsoft.Json.dll</HintPath>
-    </Reference>    
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PluginAPI.cs" />
     <Compile Include="UiBotPlugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
