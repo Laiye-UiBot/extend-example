@@ -3,6 +3,7 @@
 
 #include <stdarg.h>
 #include <stdio.h>
+#include <stdint.h>
 #include "luaconf.h"
 /*
 ** $Id: lua.h,v 1.332 2016/12/22 15:51:20 roberto Exp $
@@ -807,4 +808,13 @@ EXTERN_DEF void (*luaL_openlibs) (lua_State *L);
 
 
 #endif
+
+EXTERN_DEF const char* (*GetCommanderInfo)();
 EXTERN_DEF const char* (*GetString)(const char *);
+EXTERN_DEF bool (*IsStop)();
+EXTERN_DEF int (*ExecuteStatement)(const char *);
+EXTERN_DEF void (*TracePrint)(const char *, uint32_t, const char *);
+EXTERN_DEF void (*PushContext)();
+EXTERN_DEF void (*PopContext)();
+EXTERN_DEF lua_State* (*GetContext)();
+EXTERN_DEF int (*InvokeRobotCore)(int, const char *);
