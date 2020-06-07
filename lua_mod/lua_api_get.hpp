@@ -159,5 +159,13 @@ GetApiTable("luaopen_math", (ptrdiff_t *)&luaopen_math);
 GetApiTable("luaopen_debug", (ptrdiff_t *)&luaopen_debug);
 GetApiTable("luaopen_package", (ptrdiff_t *)&luaopen_package);
 GetApiTable("luaL_openlibs", (ptrdiff_t *)&luaL_openlibs);
+GetApiTable("GetCommanderInfo", (ptrdiff_t *)&GetCommanderInfo);
 GetApiTable("GetString", (ptrdiff_t *)&GetString);
+GetApiTable("IsStop", (ptrdiff_t *)&IsStop);
+GetApiTable("ExecuteStatement", (ptrdiff_t *)&ExecuteStatement);
+GetApiTable("TracePrint", (ptrdiff_t *)&TracePrint);
+GetApiTable("PushContext", (ptrdiff_t *)&PushContext);
+GetApiTable("PopContext", (ptrdiff_t *)&PopContext);
+GetApiTable("GetContext", (ptrdiff_t *)&GetContext);
+GetApiTable("InvokeRobotCore", (ptrdiff_t *)&InvokeRobotCore);
 }
