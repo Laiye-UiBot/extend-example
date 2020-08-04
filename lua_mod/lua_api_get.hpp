@@ -164,6 +164,7 @@ GetApiTable("GetString", (ptrdiff_t *)&GetString);
 GetApiTable("IsStop", (ptrdiff_t *)&IsStop);
 GetApiTable("ExecuteStatement", (ptrdiff_t *)&ExecuteStatement);
 GetApiTable("TracePrint", (ptrdiff_t *)&TracePrint);
+GetApiTable("GetRuntimeInfo", (ptrdiff_t *)&GetRuntimeInfo);
 GetApiTable("PushContext", (ptrdiff_t *)&PushContext);
 GetApiTable("PopContext", (ptrdiff_t *)&PopContext);
 GetApiTable("GetContext", (ptrdiff_t *)&GetContext);

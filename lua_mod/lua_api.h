@@ -814,6 +814,7 @@ EXTERN_DEF const char* (*GetString)(const char *);
 EXTERN_DEF bool (*IsStop)();
 EXTERN_DEF int (*ExecuteStatement)(const char *);
 EXTERN_DEF void (*TracePrint)(const char *, uint32_t, const char *);
+EXTERN_DEF const char* (*GetRuntimeInfo)(const char *);
 EXTERN_DEF void (*PushContext)();
 EXTERN_DEF void (*PopContext)();
 EXTERN_DEF lua_State* (*GetContext)();
